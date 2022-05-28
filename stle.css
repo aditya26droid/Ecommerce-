@@ -39,13 +39,16 @@ background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+
     .carousel{
         margin-bottom: 20px;
     }
+    .carousel .carousel-item {
+        height: 300px; }
     .carousel-inner{
       background-color: grey;
      }
-    #carousel-Button{
-    position: relative;
-    z-index: 2;
-    }
+     #carouselButton {
+        right: 0px;
+        position: absolute;
+        bottom: 0px;
+        z-index: 1; }
     .button{
         margin-right: 10px;
     }

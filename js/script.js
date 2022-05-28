@@ -1,19 +1,16 @@
 $(document).ready(function(){
-    $('#mycarousel').hover(function(){
-        $('#mycarousel').carousel('pause');
-        $("#carousel-Button").click(function(){
-            if($('#carousel-Button').children('span').hasClass('fa-pause'))
-            {
-               $('#mycarousel').carousel('pause');
-               $('#carousel-Button').children('span').removeClass('fa-pause');
-               $('#carousel-Button').children('span').addClass('fa-play'); 
+    $("#mycarousel").carousel( { interval: 2000  } );
+    $("#carouselButton").click(function(){
+        if ($("#carouselButton").children("span").hasClass('fa-pause')) {
+                $("#mycarousel").carousel('pause');
+                $("#carouselButton").children("span").removeClass('fa-pause');
+                $("#carouselButton").children("span").addClass('fa-play');
             }
-         else
-         {
-             $('#mycarousel').carousel('cycle');
-             $('#carousel-Button').children('span').removeClass('fa-play');
-             $('#carousel-Button').children('span').addClass('fa-pause'); 
-         }
-         });
+        else if ($("#carouselButton").children("span").hasClass('fa-play')){
+                $("#mycarousel").carousel('cycle');
+                $("#carouselButton").children("span").removeClass('fa-play');
+                $("#carouselButton").children("span").addClass('fa-pause');                    
+            }
+
     });
-});
+});    
