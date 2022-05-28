@@ -61,10 +61,6 @@
                          <div class="carousel-item">
                             <img class="image"
                                 src="images/shoe5.jpg" alt="nonja">
-                            <div class="jj">
-                                <p>Price</p>
-                                <p>Price</p>
-                            </div>
                             </div>
 
                             <div class="carousel-item">
@@ -184,6 +180,8 @@
             <a href="" class="btn button btn-success">Buy Now</a>
            </div>  
         </div>
+        </div>
+        <div class="alan-btn"></div>
       </div>
     
     </div>
@@ -234,5 +232,17 @@
    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
    <script src="js/script.js"></script>
+   <script type="text/javascript" src="https://studio.alan.app/web/lib/alan_lib.min.js"></script>
+<script>
+  var alanBtnInstance = alanBtn({
+    key: "ca9e289fb7fbfa46e857c35e774a78082e956eca572e1d8b807a3e2338fdd0dc/stage",
+    onCommand: function (commandData) {
+      if (commandData.command === "go:back") {
+        //call client code that will react on the received command
+      }
+    },
+    rootEl: document.getElementById("alan-btn"),
+  });
+</script>
 </body>
 </html>
