@@ -14,3 +14,8 @@ $(document).ready(function(){
 
     });
 });    
+$(document).ready(function(){        
+    $("#login").on('click',function(){
+        $("#loginModal").modal("show");
+    });
+});
